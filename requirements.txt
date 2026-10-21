@@ -1,0 +1,4 @@
+flask
+playwright
+pymupdf
+python-pptx
