@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертатор</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Конвертатор HTML-презентаций</h1>
+    <form id="convert-form" enctype="multipart/form-data">
+        <label>Файл (.html или .zip)</label>
+        <input type="file" name="document" id="file" accept=".html,.htm,.zip" required>
+        <div class="hint">.zip - если у презентации рядом с HTML лежат свои картинки, стили и скрипты</div>
+
+        <label>Режим</label>
+        <select name="mode" id="mode">
+            <option value="auto">Авто</option>
+            <option value="keyboard">Листать клавишей</option>
+            <option value="scroll">Прокрутка страницы</option>
+        </select>
+
+        <div class="option" data-modes="keyboard scroll">
+            <label>Размер окна</label>
+            <select name="size">
+                <option value="1280x720">1280×720 (16:9)</option>
+                <option value="1920x1080">1920×1080 (16:9)</option>
+                <option value="1024x768">1024×768 (4:3)</option>
+                <option value="1280x800">1280×800 (16:10)</option>
+            </select>
+        </div>
+
+        <div class="option" data-modes="keyboard scroll">
+            <label>Чёткость</label>
+            <select name="scale">
+                <option value="1">1×</option>
+                <option value="2" selected>2×</option>
+                <option value="3">3× (для печати)</option>
+            </select>
+        </div>
+
+        <div class="option" data-modes="keyboard">
+            <label>Клавиша для следующего слайда</label>
+            <select name="key">
+                <option value="ArrowRight">→</option>
+                <option value="ArrowDown">↓</option>
+                <option value="PageDown">PageDown</option>
+                <option value="Space">Пробел</option>
+                <option value="click">Клик мышью</option>
+            </select>
+        </div>
+
+        <div class="option" data-modes="keyboard scroll">
+            <label>Пауза после перехода, мс</label>
+            <input type="text" name="pause" value="400">
+            <div class="hint">Увеличьте, если на слайдах долгие анимации</div>
+            <label class="checkbox"><input type="checkbox" name="freeze"> Отключить CSS-анимации</label>
+        </div>
+
+        <label>Выходной формат</label>
+        <select name="format" id="format">
+            <option value="pdf">PDF</option>
+            <option value="pptx">PPTX</option>
+        </select>
+
+        <button type="submit" id="submit-btn">Конвертировать</button>
+        <div id="status"></div>
+    </form>
+
+    <div id="result" hidden>
+        <label>Слайды</label>
+        <div class="hint">Щелчок по слайду убирает его из файла, двойной щелчок - открывает крупно. <span id="picked"></span></div>
+        <div id="grid"></div>
+        <button id="download-btn" disabled>Скачать</button>
+    </div>
+
+    <dialog id="viewer"><img alt=""><form method="dialog"><button>Закрыть</button></form></dialog>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
