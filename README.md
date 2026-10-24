@@ -109,4 +109,4 @@ python run.py
   - `reveal.html` - презентация на reveal.js 
   - `reveal-demo.zip` - официальное демо [reveal.js](https://github.com/hakimel/reveal.js) 6.0.2, 41 слайд
   - `impress-demo.zip` - официальное демо [impress.js](https://github.com/impress/impress.js) 2.0.0, 13 слайдов
-  - `remark-demo.zip` - сайт [remarkjs.com](https://github.com/gnab/remark), сам сделанный на remark, 19 слайдов
+  - `remark-demo.zip` - remark.js, 19 слайдов
