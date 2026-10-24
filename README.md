@@ -35,6 +35,21 @@
 </tr>
 </table>
 
+# reveal-demo.zip конвертация в .pptx
+
+<table>
+<tr>
+<td align="center">Входной файл .zip</td>
+<td align="center">Работа приложения</td>
+<td align="center">Выходной файл .pptx</td>
+</tr>
+<tr>
+<td><img width="320" height="180" alt="image" src="https://github.com/user-attachments/assets/8193b88e-81d7-4ed6-b4be-7c6dbaa0b7fd" /></td>
+<td><img width="87" height="180" alt="image" src="https://github.com/user-attachments/assets/8ba20cf9-1698-4f07-ba29-6c33c2102346" /></td>
+<td><img width="371" height="180" alt="image" src="https://github.com/user-attachments/assets/9a542a7a-c21f-4471-a585-af2d4a6825b3" /></td>
+</tr>
+</table>
+
 ## Перед работой нам надо
 
 ### 1. Установить зависимости
