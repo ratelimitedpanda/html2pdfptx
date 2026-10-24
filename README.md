@@ -5,7 +5,7 @@
 
 ## Пример работы
 
-# custom-js.html конвертация в .pptx
+### custom-js.html конвертация в .pptx
 
 <table>
 <tr>
@@ -20,7 +20,7 @@
 </tr>
 </table>
 
-# impress.js конвертация в .pdf
+### impress.js конвертация в .pdf
 
 <table>
 <tr>
@@ -35,7 +35,7 @@
 </tr>
 </table>
 
-# reveal-demo.zip конвертация в .pptx
+### reveal-demo.zip конвертация в .pptx
 
 <table>
 <tr>
