@@ -3,3 +3,88 @@ body {
   max-width: 600px;
   margin: 60px auto;
 }
+
+label {
+  display: block;
+  margin-top: 16px;
+  font-weight: bold;
+}
+
+label.checkbox {
+  font-weight: normal;
+}
+
+input[type="text"],
+input[type="file"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  margin-top: 24px;
+  padding: 10px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hint {
+  color: #666;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+#status {
+  margin-top: 16px;
+  font-weight: bold;
+  display: none;
+}
+
+#status.ok {
+  color: #1a7a1a;
+}
+
+#status.error {
+  color: #c0392b;
+}
+
+.option[hidden],
+#result[hidden] {
+  display: none;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.thumb {
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+}
+
+.thumb img {
+  display: block;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.thumb.off img {
+  opacity: 0.25;
+}
+
+.thumb.off span::after {
+  content: " - не войдёт";
+  color: #c0392b;
+}
+
+dialog img {
+  display: block;
+  max-width: 90vw;
+  max-height: 80vh;
+}
